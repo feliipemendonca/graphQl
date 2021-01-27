@@ -70,7 +70,12 @@ const resolvers = {
             }
         },
         numerosMegaSena(){
-            return [4,8,123,25,33,53]
+            // return [4,8,123,25,33,53]
+            const crescente = (a,b) => a - b
+
+            return Array(6).fill(0)
+                .map(n => parseInt(Math.random() * 60 +1))
+                .sort(crescente)
         }
     },
 }
